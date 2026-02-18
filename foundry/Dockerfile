@@ -17,4 +17,4 @@ RUN apt update && apt install -y --no-install-recommends \
 RUN apt install unzip
 RUN unzip foundry.zip && rm -f foundry.zip
 
-CMD [ "/usr/local/bin/node", "./resources/app/main.js" ]
+CMD [ "/usr/local/bin/node", "./resources/app/main.js", "--dataPath=/data" ]

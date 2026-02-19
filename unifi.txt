@@ -1,0 +1,9 @@
+git repo: git@github.com:lemker/unifi-os-server.git
+
+To bring the service up
+
+sudo docker compose -f unifi-compose.yaml --project-directory unifi-os-server up
+
+and to stop it
+
+sudo docker compose -f unifi-compose.yaml --project-directory unifi-os-server down

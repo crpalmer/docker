@@ -1,0 +1,3 @@
+[submodule "unifi-os-server"]
+	path = unifi-os-server
+	url = git@github.com:lemker/unifi-os-server.git

@@ -1,0 +1,97 @@
+services:
+  minecraft-1:
+    image: itzg/minecraft-bedrock-server
+    environment:
+      EULA: "TRUE"
+    ports:
+      - "40000:19132/udp"
+    volumes:
+      - /data/minecraft-1:/data
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+#  minecraft-2:
+#    image: itzg/minecraft-bedrock-server
+#    environment:
+#      EULA: "TRUE"
+#    ports:
+#      - "40001:19132/udp"
+#    volumes:
+#      - /data/minecraft-2:/data
+#    stdin_open: true
+#    tty: true
+#    restart: unless-stopped
+#
+#  minecraft-3:
+#    image: itzg/minecraft-bedrock-server
+#    environment:
+#      EULA: "TRUE"
+#    ports:
+#      - "40002:19132/udp"
+#    volumes:
+#      - /data/minecraft-3:/data
+#    stdin_open: true
+#    tty: true
+#    restart: unless-stopped
+#
+#  minecraft-4:
+#    image: itzg/minecraft-bedrock-server
+#    environment:
+#      EULA: "TRUE"
+#    ports:
+#      - "40003:19132/udp"
+#    volumes:
+#      - /data/minecraft-4:/data
+#    stdin_open: true
+#    tty: true
+#    restart: unless-stopped
+#
+#  minecraft-5:
+#    image: itzg/minecraft-bedrock-server
+#    environment:
+#      EULA: "TRUE"
+#    ports:
+#      - "40004:19132/udp"
+#    volumes:
+#      - /data/minecraft-5:/data
+#    stdin_open: true
+#    tty: true
+#    restart: unless-stopped
+#
+#  minecraft-6:
+#    image: itzg/minecraft-bedrock-server
+#    environment:
+#      EULA: "TRUE"
+#    ports:
+#      - "40005:19132/udp"
+#    volumes:
+#      - /data/minecraft-6:/data
+#    stdin_open: true
+#    tty: true
+#    restart: unless-stopped
+#
+#  minecraft-7:
+#    image: itzg/minecraft-bedrock-server
+#    environment:
+#      EULA: "TRUE"
+#    ports:
+#      - "40006:19132/udp"
+#    volumes:
+#      - /data/minecraft-7:/data
+#    stdin_open: true
+#    tty: true
+#    restart: unless-stopped
+#
+#  minecraft-8:
+#    image: itzg/minecraft-bedrock-server
+#    environment:
+#      EULA: "TRUE"
+#    ports:
+#      - "40007:19132/udp"
+#    volumes:
+#      - /data/minecraft-8:/data
+#    stdin_open: true
+#    tty: true
+#    restart: unless-stopped
+

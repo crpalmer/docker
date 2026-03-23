@@ -20,3 +20,16 @@ services:
     ports:
       - "31000:30000"
     restart: unless-stopped
+
+  foundry-test:
+    image: foundry
+    container_name: foundry-test
+    environment:
+        VERSION: test
+    volumes:
+      - type: bind
+        source: /data/test-foundry
+        target: /data
+    ports:
+      - "32000:30000"
+    restart: unless-stopped

@@ -14,11 +14,10 @@ RUN apt-get update && apt-get -y install \
 COPY Dungeondraft-1.2.0.1-Linux64.deb /root/dd.deb
 RUN apt-get update && apt-get install -y /root/dd.deb && rm /root/dd.deb
 
-# Configure the webserver
-COPY default /etc/nginx/sites-available/default 
-
-# Configure the running processes
+# Configure the services
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY init /root/.fluxbox/init
+COPY default /etc/nginx/sites-available/default
 
 CMD ["/usr/bin/supervisord"]
 

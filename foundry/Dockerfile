@@ -2,11 +2,11 @@ FROM node:24-bookworm
 
 WORKDIR /app
 
-ENV VERSION="stable"
+ENV VERSION="13"
 
 COPY start.sh /app/start.sh
-COPY FoundryVTT-Linux-13.351.zip /app/foundry-stable.zip
-COPY FoundryVTT-Linux-14.357.zip /app/foundry-test.zip
+COPY FoundryVTT-Linux-13.351.zip /app/foundry-13.zip
+COPY FoundryVTT-Linux-14.359.zip /app/foundry-14.zip
 
 RUN apt update && apt install -y --no-install-recommends \
 	libasound-dev \
@@ -19,7 +19,7 @@ RUN apt update && apt install -y --no-install-recommends \
 	libgtk-3-dev \
 	libnss3
 RUN apt install unzip
-RUN mkdir foundry-stable && cd foundry-stable && unzip ../foundry-stable.zip && rm -f ../foundry-stable.zip
-RUN mkdir foundry-test && cd foundry-test && unzip ../foundry-test.zip && rm -f ../foundry-test.zip
+RUN mkdir foundry-13 && cd foundry-13 && unzip ../foundry-13.zip && rm -f ../foundry-13.zip
+RUN mkdir foundry-14 && cd foundry-14 && unzip ../foundry-14.zip && rm -f ../foundry-14.zip
 
 CMD [ "/app/start.sh" ]

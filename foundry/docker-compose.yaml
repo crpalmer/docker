@@ -2,6 +2,8 @@ services:
   foundry:
     image: foundry
     container_name: foundry-crpalmer
+    environment:
+        VERSION: 13
     volumes:
       - type: bind
         source: /data/foundry
@@ -13,6 +15,8 @@ services:
   foundry-james:
     image: foundry
     container_name: foundry-james
+    environment:
+        VERSION: 13
     volumes:
       - type: bind
         source: /data/james-foundry
@@ -25,7 +29,7 @@ services:
     image: foundry
     container_name: foundry-test
     environment:
-        VERSION: test
+        VERSION: 14
     volumes:
       - type: bind
         source: /data/test-foundry

@@ -1,0 +1,18 @@
+services:
+  trlcorp-server:
+    image: dungeondraft
+    container_name: dungeondraft
+    ports:
+      - "6080:6080"
+      - "6081:80"
+    volumes:
+      - type: bind
+        source: /Dungeondraft-assets
+        target: /assets
+      - type: bind
+        source: /data/dungeondraft/save
+        target: /save
+      - type: bind
+        source: /data/dungeondraft/local
+        target: /root/.local
+    restart: unless-stopped

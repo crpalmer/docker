@@ -3,7 +3,7 @@ services:
     image: dungeondraft
     container_name: dungeondraft
     ports:
-      - "6080:6080"
+      - "80:6080"
       - "6081:80"
     volumes:
       - type: bind

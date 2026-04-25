@@ -1,5 +1,5 @@
 [begin] (fluxbox)
-[exec] (Dungeondraft) { taskset --cpu-list 0 /opt/Dungeondraft/Dungeondraft.x86_64 } <>
+[exec] (Dungeondraft) { /root/dungeondraft.sh } <>
 [include] (/etc/X11/fluxbox/fluxbox-menu)
 [end]
 

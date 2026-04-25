@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y /root/dd.deb && rm /root/dd.deb
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY init /root/.fluxbox/init
 COPY menu /root/.fluxbox/menu
+COPY dungeondraft.sh /root/dungeondraft.sh
 COPY default /etc/nginx/sites-available/default
 
 CMD ["/usr/bin/supervisord"]

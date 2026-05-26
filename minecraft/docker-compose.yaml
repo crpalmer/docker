@@ -11,18 +11,18 @@ services:
     tty: true
     restart: unless-stopped
 
-#  minecraft-2:
-#    image: itzg/minecraft-bedrock-server
-#    environment:
-#      EULA: "TRUE"
-#    ports:
-#      - "40001:19132/udp"
-#    volumes:
-#      - /data/minecraft-2:/data
-#    stdin_open: true
-#    tty: true
-#    restart: unless-stopped
-#
+  minecraft-2:
+    image: itzg/minecraft-bedrock-server
+    environment:
+      EULA: "TRUE"
+    ports:
+      - "40001:19132/udp"
+    volumes:
+      - /data/minecraft-2:/data
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
 #  minecraft-3:
 #    image: itzg/minecraft-bedrock-server
 #    environment:
